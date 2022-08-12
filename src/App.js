@@ -14,7 +14,7 @@ function App() {
     display:flex;
     flex-direction: row;
 
-    main{ // footer를 아래로 내려주기 위해 임시로 작성한 코드
+    article{ // footer를 아래로 내려주기 위해 임시로 작성한 코드
       display:flex;
       flex-direction: column;
       justify-content: space-between;
@@ -25,12 +25,11 @@ function App() {
   
   return (
     <Layout className="App">
-      <main> 
+      <article> 
         <Header />
         <Footer />
-      </main>
+      </article>
       <Aside />
-      
     </Layout>
   );
 }

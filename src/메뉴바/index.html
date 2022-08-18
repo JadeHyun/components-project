@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/652eaa2d37.js" crossorigin="anonymous"></script>    
+    <title>메뉴바</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="toggle"><i class="fa-solid fa-plus"></i></div>
+<!-- ul 태그 넣어서 리펙토링 할것. -->
+            <li style="--i:0;"><a href="#"><i class="fa-solid fa-house-user"></i></a></li>
+            <li style="--i:1;"><a href="#"><i class="fa-solid fa-users"></i></a></li>
+            <li style="--i:2;"><a href="#"><i class="fa-solid fa-gears"></i></a></li>
+            <li style="--i:3;"><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+            <li style="--i:4;"><a href="#"><i class="fa-solid fa-key"></i></a></li>
+            <li style="--i:5;"><a href="#"><i class="fa-solid fa-video"></i></a></li>
+            <li style="--i:6;"><a href="#"><i class="fa-solid fa-gamepad"></i></a></li>
+            <li style="--i:7;"><a href="#"><i class="fa-solid fa-camera"></i></a></li>
+       
+    </div>
+    <script>
+        let toggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu')
+        toggle.onclick = function(){
+            menu.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:linear-gradient(45deg,#8460ed,#ff1252);
+}
+
+.menu{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    position: absolute;
+    left: 0;
+    list-style: none;
+    transform-origin: 100px;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(80px);
+    /* 0deg는 왜 지정하는지 모르겠음. 근데 translateX 는 + 버튼 에 숨기려고 추가하는 속성. */
+}
+
+
+
+.menu.active li {
+    transform: rotate(calc(360deg/8 * (var(--i))));
+    /* 360 / 8 을 한 이유는 li의 갯수가 8개라서. 
+        360도를 8개를 나눠 계산 후 펼친다.  */
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.menu li a {
+    color: black;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    transform: rotate(calc(360deg/-8 * (var(--i))));
+    box-shadow: 0 3px 4px rgba(0,0,0,15);
+    /* 아이콘의 방향을 잡아줫음. => 이건 좀 더 공부해볼것.  */
+}
+
+.menu li a:hover{
+    color:#ff1252
+}
+
+.toggle{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow:0 0 4px rgba(0,0,0,15);
+    font-size: 2em;
+    transition: 1.25s;
+}
+
+/* 클래스 이름이 menu 와 active 가 있는 하위 자식클래스인 toggle 에 대한 속성  */
+.menu.active .toggle { 
+    transform: rotate(315deg);
+    transition: 1.25s;
+}

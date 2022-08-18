@@ -4,6 +4,7 @@ import { GrFacebook } from "react-icons/gr";
 import { FcGoogle } from "react-icons/fc";
 import { SiNaver } from 'react-icons/si'
 import naver from '../../img/naver_sprite.png'
+import {AiFillHome} from 'react-icons/ai'
 
 
 const Background = styled.div`
@@ -40,16 +41,6 @@ const Background = styled.div`
         margin:0 10px;
     }
 
-/* naver background-img 예시코드 - 삭제예정. */
-    #naver_login{
-        display: inline-block;
-        background: url('https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png') no-repeat -840px -48px;
-        width: 44px;
-        height: 44px;  
-    }
-
-
-
     /* icons */
     #naver_icon{
         font-size: 44px;
@@ -75,12 +66,6 @@ const Background = styled.div`
         margin-bottom: 10px;
     }
 
-    /* 발표 후 삭제 */
-    .bgi{
-        background: url('https://s.pstatic.net/static/www/img/uit/sp_main_4f8ccb.png') no-repeat -540px -221px;
-        width: 272px;
-        height: 104px;
-    }
 `;
 
 const Modal = () => {
@@ -92,8 +77,7 @@ const Modal = () => {
 
     return (
         <Background>
-            {/* 발표 후 삭제 */}
-            {/* <img src={naver} /> */}
+            <AiFillHome />
             <button className='openModalBtn' onClick={onModal}>모달창 클릭!</button>
             {open ? <div className='modal'>
                 <h1>로그인</h1>
@@ -104,11 +88,7 @@ const Modal = () => {
                     <input id='password' type='password' placeholder='PASSWORD' />
                 </form>
                 <div className='login_box'>
-                    {/* 발표후 삭제 */}
-                    {/* <div className='bgi'></div> */}
                     <a id='naver_icon' href='https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com'><SiNaver className='box-shadow'/></a>
-                    {/* 발표 후 icon으로 바꿀것. */}
-                    <a id='naver_login' href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com"/>
                     <a id='fb_icon' href='https://www.facebook.com/'><GrFacebook className='box-shadow'/></a>
                     <a id='google_icon' href='https://www.google.co.kr/'><FcGoogle className='box-shadow'/></a>
                 </div>

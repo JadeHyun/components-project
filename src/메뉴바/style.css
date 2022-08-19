@@ -12,6 +12,31 @@ body{
     background:linear-gradient(45deg,#8460ed,#ff1252);
 }
 
+/* li:first-child(0){
+    --i:0;
+}
+li:nth-child(1){
+    --i:1;
+}
+li:nth-child(2) {
+    --i:2;
+}
+li:nth-child(3) {
+    --i: 3;
+}
+li:nth-child(4) {
+    --i: 4;
+}
+li:nth-child(5) {
+    --i: 5;
+}
+li:nth-child(6) {
+    --i: 6;
+}
+li:last-child(7) {
+    --i: 7;
+} */
+
 .menu{
     position: relative;
     width: 200px;
